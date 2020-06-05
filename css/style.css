@@ -188,7 +188,6 @@ input {
 
 .header .list-nav .drob-lang {
     position: relative;
-    top: -20px;
 }
 
 .header .list-nav .lang {
@@ -198,12 +197,16 @@ input {
     background-color: var(--white);
     padding: 10px 20px;
     border-radius: 5px;
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .4s;
 }
 
 .header .list-nav .drob-lang:hover .lang {
-    display: block;
+    opacity: 1;
+    visibility: visible;
 }
+
 
 .header .list-nav .lang li.lang-select a {
     color: var(--mainColor);
@@ -348,7 +351,7 @@ input {
         padding: 10px 20px;
         background-color: #000;
         z-index: 9;
-        margin-top: 15px;
+        top: 30px;
         opacity: 1;
         display: none;
     }

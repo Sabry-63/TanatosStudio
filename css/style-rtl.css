@@ -43,6 +43,10 @@ body {
     font-size: 1.5em;
 }
 
+.list.drob-lang {
+    font-size: 1.3em;
+}
+
 @media (max-width: 767px) {
     .header .nav-bar .list-nav{
         top: 50px;

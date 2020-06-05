@@ -118,6 +118,25 @@ body {
     margin-left: 20px;
 }
 
+@media (max-width: 992px) {
+    .contact .fa-info,
+    .contact .fa-clock-o {
+        position: relative;
+        text-align: center;
+        display: block;
+    }
+
+    .contact .contact-info .info,
+    .contact .contact-tiems .time {
+        padding-right: 0;
+        text-align: center;
+    }
+    .contact .contact-info .contact-col i {
+        margin-left: 0;
+        margin: 10px 0;
+        display: block;
+    }
+}
 /* ========================================
     End Contcat Style  ==================*/
 

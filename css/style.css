@@ -97,7 +97,7 @@ input {
 .fa-angle-up {
     position: fixed;
     right: 20px;
-    bottom: 20px;
+    bottom: 30px;
     z-index: 10;
     color: var(--white);
     background-color: var(--mainColor);
@@ -109,36 +109,16 @@ input {
     font-size: 1.5em;
     cursor: pointer;
     display: none;
-    -webkit-animation: UpBtn linear 2s infinite;
-    -moz-animation: UpBtn linear 2s infinite;
-    -o-animation: UpBtn linear 2s infinite;
-    animation: UpBtn linear 2s infinite;
-}
-
-@keyframes UpBtn {
-    0% {
-        width: 50px;
-        height: 50px;
-    }
-    25% {
-        width: 53px;
-        height: 53px;
-        line-height: 53px;
-    }
-    50% {
-        width: 56px;
-        height: 56px;
-        line-height: 56px;
-    }
-    75% {
-        width: 53px;
-        height: 53px;
-        line-height: 53px;
-    }
-    100% {
-        width: 50px;
-        height: 50px;
-    }
+    font-weight: bold;
+    /* Animation In Header & Line 252 */
+    -webkit-animation: down linear 2s infinite;
+    -moz-animation: down linear 2s infinite;
+    -o-animation: down linear 2s infinite;
+    animation: down linear 2s infinite;
+    -webkit-transition: right 0.9s;
+    -moz-transition: right 0.9s;
+    -o-transition: right 0.9s;
+    transition: right 0.9s;
 }
 
 @media (max-width: 767px) {
@@ -147,6 +127,9 @@ input {
     }
     .title-section .desc {
         width: 100%;
+    }
+    .fa-angle-up {
+        line-height: 45px;
     }
 }
 /* ========================================
@@ -170,7 +153,7 @@ input {
     left: 0;
     top: 0;
     z-index: 9;
-    padding: 25px 17%;
+    padding: 25px 25px;
     background-color: rgba(0, 0, 0, 0.8);
     transition: padding 0.4s;
     box-shadow: 0 0 4px 0 var(--white);
@@ -205,11 +188,48 @@ input {
 .header .list-nav .list .link-list {
     color: var(--white);
     padding: 10px 15px;
+    font-size: 1.2em;
 }
 
 .header .list-nav .contant-listnav ul li {
     margin: 20px 10px;
     display: inline-block;
+}
+
+.header .list-nav .contant-listnav ul li i {
+    background-color: var(--white);
+    color: var(--mainColor);
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 3px;
+    font-size: 1.3em;
+}
+
+.header .list-nav .contant-listnav ul li i:hover {
+    -webkit-animation: hide linear 1s infinite;
+    -moz-animation: hide linear 1s infinite;
+    -o-animation: hide linear 1s infinite;
+    animation: hide linear 1s infinite;
+}
+
+@keyframes hide {
+    0% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 0.6;
+    }
+    75% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .contant-listnav {
@@ -296,12 +316,13 @@ input {
     .header {
         position: relative;
     }
+
     .header .nav-bar .list-nav {
         height: auto;
         width: 100%;
         position: relative;
         padding: 10px 20px;
-        background-color: transparent;
+        background-color: #000;
         z-index: 9;
         margin-top: 15px;
         opacity: 1;
@@ -315,7 +336,7 @@ input {
     }
 
     .header .list-nav .list {
-        margin: 25px 0;
+        margin: 20px 0;
         text-align: center;
     }
 
@@ -330,19 +351,18 @@ input {
     }
 
     .header .list-nav ul ul li {
-        margin: 20px 10px;
+        margin: 20px 0px;
         display: inline-block;
+    }
+    .header .list-nav .contant-listnav ul li {
+        margin: 5px;
     }
 }
 
 @media (max-width: 767px) {
-    .fixed-nav {
-        padding: 10px 15px;
-    }
-
     .header .logo,
     .header .menu {
-        font-size: 1em;
+        font-size: 1.2em;
     }
 
     .header .intro h1 {
@@ -553,6 +573,9 @@ input {
     -moz-transition: transform 0.4s;
     -o-transition: transform 0.4s;
     transition: transform 0.4s;
+    -webkit-transform: scaleY(0);
+    -moz-transform: scaleY(0);
+    -o-transform: scaleY(0);
     transform: scaleY(0);
 }
 
@@ -564,14 +587,10 @@ input {
 }
 
 .work .items-work .item .overlay h3 {
-    -webkit-transition-duration: 0.5s;
-    -moz-transition-duration: 0.5s;
-    -o-transition-duration: 0.5s;
-    transition-duration: 0.5s;
-    -webkit-transition-delay: 0.5s;
-    -moz-transition-delay: 0.5s;
-    -o-transition-delay: 0.5s;
-    transition-delay: 0.5s;
+    -webkit-transition-delay: 0.3s;
+    -moz-transition-delay: 0.3s;
+    -o-transition-delay: 0.3s;
+    transition-delay: 0.3s;
 }
 
 .work .items-work .item .overlay h3,
@@ -581,35 +600,32 @@ input {
     -moz-transform: scale(0);
     -o-transform: scale(0);
     transform: scale(0);
-    -webkit-transition-property: transform, margin-top;
-    -moz-transition-property: transform, margin-top;
-    -o-transition-property: transform, margin-top;
-    transition-property: transform, margin-top;
-    margin-top: 0;
-}
-
-.work .items-work .item .overlay p {
+    -webkit-transition-property: transform, margin-top, visibility;
+    -moz-transition-property: transform, margin-top, visibility;
+    -o-transition-property: transform, margin-top, visibility;
+    transition-property: transform, margin-top, visibility;
     -webkit-transition-duration: 1s;
     -moz-transition-duration: 1s;
     -o-transition-duration: 1s;
     transition-duration: 1s;
-    -webkit-transition-delay: 1s;
-    -moz-transition-delay: 1s;
-    -o-transition-delay: 1s;
-    transition-delay: 1s;
+    margin-top: 0;
+    visibility: hidden;
+}
+
+.work .items-work .item .overlay p {
+    -webkit-transition-delay: 0.6s;
+    -moz-transition-delay: 0.6s;
+    -o-transition-delay: 0.6s;
+    transition-delay: 0.6s;
 }
 
 .work .items-work .item .overlay button {
     background-color: transparent;
     color: var(--white);
-    -webkit-transition-duration: 1.2s;
-    -moz-transition-duration: 1.2s;
-    -o-transition-duration: 1.2s;
-    transition-duration: 1.2s;
-    -webkit-transition-delay: 1.2s;
-    -moz-transition-delay: 1.2s;
-    -o-transition-delay: 1.2s;
-    transition-delay: 1.2s;
+    -webkit-transition-delay: 0.7s;
+    -moz-transition-delay: 0.7s;
+    -o-transition-delay: 0.7s;
+    transition-delay: 0.7s;
 }
 
 .work .items-work .item:hover h3,
@@ -620,6 +636,7 @@ input {
     -o-transform: scale(1);
     transform: scale(1);
     margin-top: 30px;
+    visibility: visible;
 }
 
 .work .items-work .item .overlay button:hover {

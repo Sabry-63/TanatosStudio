@@ -3,6 +3,7 @@ $(function() {
 
     // Set Hieght For Header
     $(".header").css("height", $(window).innerHeight());
+    // Remove Padding Right To Menu Btn In Nav List & Set Padiing Right 30 PX
 
     // Start Function Fixed Mune ==============================
     $(window).scroll(function() {
@@ -21,6 +22,10 @@ $(function() {
             // Check Widow Width & Set Background To Full Screen
             if ($(window).innerWidth() > 992) {
                 $(".header .nav-bar .list-nav").css("background", "#f7600e");
+                // Check Show Navlist & Set Padding In Menu Nav
+                if ($(".header .list-nav").hasClass("show")) {
+                    $(".nav-bar").css("paddingRight", widthNavList);
+                }
             } else {
                 // Navlist Up
                 $(".header .list-nav").slideUp();
@@ -28,7 +33,8 @@ $(function() {
         } else {
             // Remove Fixed Top Navlist
             $(".nav-bar").removeClass("fixed-nav");
-
+            // Scroll > window Hieght Remove Padding In Menu Nav
+            $(".nav-bar").css("paddingRight", 0);
             // Show Btn Top Page
             $(".fa-angle-up").fadeOut();
 

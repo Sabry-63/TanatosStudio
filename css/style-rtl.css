@@ -1,0 +1,121 @@
+/*
+    - Global Sections Style
+    - Header Style
+    - Features Style
+    - Subscribe Style
+    - Work Style 
+    - Testmonial Style
+    - Team Style
+    - Contcat
+    - Footer
+*/
+
+/* ========================================
+    Srtart Global Secntios Style ==================*/
+body {
+    font-family: "El Messiri", sans-serif;
+}
+
+.fa-angle-up {
+    right: auto;
+    left: 20px;
+    -webkit-transition: left 0.9s;
+    -moz-transition: left 0.9s;
+    -o-transition: left 0.9s;
+    transition: left 0.9s;
+}
+
+/* ========================================
+    End Global Secntios Style ==================*/
+
+/* ========================================
+    Srtart Header Style ==================*/
+.header .list-nav {
+    right: auto;
+    left: 0;
+}
+.header .logo {
+    float: right;
+}
+
+.header .menu {
+    float: left;
+    font-size: 1.5em;
+}
+
+/* ========================================
+    End Header Style  ==================*/
+
+/* ========================================
+    Srtart Features Style  ==================*/
+
+/* No Edit */
+
+/* ========================================
+    End Features Style  ==================*/
+
+/* ========================================
+    Start Subscribe Style  ==================*/
+
+.subscribe form .input {
+    border: none;
+}
+
+/* ========================================
+    End Subscribe Style  ==================*/
+
+/* ========================================
+    Start Work Style  ==================*/
+
+/* ========================================
+    End Work Style  ==================*/
+
+/* No Edit */
+
+/* ========================================
+    Start Testmonial Style  ==================*/
+
+/* No Edit */
+
+/* ========================================
+    End Testmonial Style  ==================*/
+
+/* ========================================
+    Start Team Style  ==================*/
+
+/* No Edit *
+/
+/* ========================================
+    End Team Style  ==================*/
+
+/* ========================================
+    Start Contcat Style  ==================*/
+.contact .contact-info,
+.contact .contact-tiems {
+    text-align: right;
+}
+
+.contact .contact-info .info,
+.contact .contact-tiems .time {
+    padding-right: 50px;
+}
+
+.contact .fa-info,
+.contact .fa-clock-o {
+    right: 0;
+}
+
+.contact .contact-info .contact-col i {
+    margin-left: 20px;
+}
+
+/* ========================================
+    End Contcat Style  ==================*/
+
+/* ========================================
+    STart Footer Style  ==================*/
+
+/* No Edit */
+
+/* ========================================
+    End Footer Style  ==================*/

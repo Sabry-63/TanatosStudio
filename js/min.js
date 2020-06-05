@@ -8,6 +8,7 @@ $(function() {
     $(window).scroll(function() {
         // Set Var
         const scroll = $(this).scrollTop();
+
         // Check Scroll Window
         if (scroll > $(this).innerHeight()) {
             // Set Navlist Top Page & Set Background To nav
@@ -20,6 +21,9 @@ $(function() {
             // Check Widow Width & Set Background To Full Screen
             if ($(window).innerWidth() > 992) {
                 $(".header .nav-bar .list-nav").css("background", "#f7600e");
+            } else {
+                // Navlist Up
+                $(".header .list-nav").slideUp();
             }
         } else {
             // Remove Fixed Top Navlist
@@ -33,14 +37,17 @@ $(function() {
                 $(".header .nav-bar .list-nav").css("background", "#f7600e");
             } else {
                 $(".header .nav-bar .list-nav").css("background", "#000");
+                // Navlist Up
+                $(".header .list-nav").slideUp();
             }
         }
     });
     // End Function Fixed Mune ============================
 
-    //
+    // Start Function CLick Link Navlist And Goto Section
     $(".link-list").click(function(e) {
         e.preventDefault();
+        // Add Class Active In Link Clicked & Remove Class Active For All Links
         $(this)
             .parent()
             .siblings()
@@ -48,7 +55,7 @@ $(function() {
             .removeClass("active");
         $(this).addClass("active");
 
-        //aintame to el
+        //Goto Section
         $("html, body").animate(
             {
                 scrollTop: $("#" + $(this).data("scroll")).offset().top + 1
@@ -56,8 +63,7 @@ $(function() {
             1000
         );
     });
-
-    //
+    // End Function CLick Link Navlist And Goto Section
 
     // Start Toggele Navlist Function ==============================
     // Create Var
@@ -93,6 +99,12 @@ $(function() {
                     },
                     500
                 );
+
+                // Set Value Right IN Btn Goto Top Pdge
+                $(".fa-angle-up").css("right", widthNavList + 20);
+
+                // Set Padding Right To Menu Btn In Nav List
+                $(".fixed-nav").css("paddingRight", widthNavList);
             } else {
                 // Reomve Margin To Body
                 $("body").animate(
@@ -109,6 +121,12 @@ $(function() {
                     },
                     500
                 );
+
+                // Remove Value Right IN Btn Goto Top Pdge & Set Right 20 PX
+                $(".fa-angle-up").css("right", 20);
+
+                // Remove Padding Right To Menu Btn In Nav List & Set Padiing Right 30 PX
+                $(".fixed-nav").css("paddingRight", 30);
             }
         } else {
             // Show & Hide Navlist To Mobail Screen
@@ -172,7 +190,7 @@ $(function() {
     });
     // End Function Testmonial  ============================
 
-    //
+    // Start Function Btn Go To Top Page
     $(".fa-angle-up").click(function() {
         $("html, body").animate(
             {
@@ -181,5 +199,5 @@ $(function() {
             2000
         );
     });
-    //
+    // End Function Btn Go To Top Page
 });

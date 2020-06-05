@@ -409,8 +409,8 @@ input {
     padding: 40px 25px;
     position: relative;
     border-radius: 4px;
-    min-height: 170px;
-    max-height: 230px;
+    /* min-height: 170px; */
+    height: 210px;
 }
 
 .features .box-features::before {

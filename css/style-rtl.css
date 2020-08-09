@@ -121,6 +121,10 @@ body {
     right: 0;
 }
 
+.sochial-media {
+    text-align: right;
+}
+
 .contact .contact-info .contact-col i {
     margin-left: 20px;
 }

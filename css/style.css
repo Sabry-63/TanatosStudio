@@ -830,12 +830,15 @@ input {
     background-color: var(--gray);
     color: var(--white);
     border-radius: 50%;
+    cursor: pointer;
     -webkit-transition: background-color 0.4s;
     -moz-transition: background-color 0.4s;
     -o-transition: background-color 0.4s;
     transition: background-color 0.4s;
 }
-
+.team .box-team .info-team i:hover {
+    opacity: 0.8;
+}
 .team .box-team:hover i.fa-facebook {
     background-color: #3b5998;
 }

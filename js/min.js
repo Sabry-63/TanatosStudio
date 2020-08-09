@@ -1,4 +1,4 @@
-$(function() {
+$(function () {
     "use strict";
 
     // Set Hieght For Header
@@ -6,7 +6,7 @@ $(function() {
     // Remove Padding Right To Menu Btn In Nav List & Set Padiing Right 30 PX
 
     // Start Function Fixed Mune ==============================
-    $(window).scroll(function() {
+    $(window).scroll(function () {
         // Set Var
         const scroll = $(this).scrollTop();
 
@@ -51,20 +51,16 @@ $(function() {
     // End Function Fixed Mune ============================
 
     // Start Function CLick Link Navlist And Goto Section
-    $(".link-list").click(function(e) {
+    $(".link-list").click(function (e) {
         e.preventDefault();
         // Add Class Active In Link Clicked & Remove Class Active For All Links
-        $(this)
-            .parent()
-            .siblings()
-            .children()
-            .removeClass("active");
+        $(this).parent().siblings().children().removeClass("active");
         $(this).addClass("active");
 
         //Goto Section
         $("html, body").animate(
             {
-                scrollTop: $("#" + $(this).data("scroll")).offset().top + 1
+                scrollTop: $("#" + $(this).data("scroll")).offset().top + 1,
             },
             1000
         );
@@ -84,7 +80,7 @@ $(function() {
     }
 
     // Click To bars
-    $(".menu").click(function() {
+    $(".menu").click(function () {
         $(".header .list-nav").toggleClass("show");
         // Check Window Width
         if ($(window).innerWidth() > 992) {
@@ -93,7 +89,7 @@ $(function() {
                 // Set Margin To Body
                 $("body").animate(
                     {
-                        marginRight: widthNavList
+                        marginRight: widthNavList - 10,
                     },
                     500
                 );
@@ -101,7 +97,7 @@ $(function() {
                 $(".header .list-nav").animate(
                     {
                         marginRight: 0,
-                        opacity: 1
+                        opacity: 1,
                     },
                     500
                 );
@@ -115,7 +111,7 @@ $(function() {
                 // Reomve Margin To Body
                 $("body").animate(
                     {
-                        marginRight: 0
+                        marginRight: 0,
                     },
                     500
                 );
@@ -123,7 +119,7 @@ $(function() {
                 $(".header .list-nav").animate(
                     {
                         marginRight: -widthNavList,
-                        opacity: 0
+                        opacity: 0,
                     },
                     500
                 );
@@ -142,10 +138,10 @@ $(function() {
     // End Toggele Navlist Function =====================================
 
     // Start Function Goto Section Features Shtmose ==============================
-    $(".header .fa-angle-down").click(function() {
+    $(".header .fa-angle-down").click(function () {
         $("html, body").animate(
             {
-                scrollTop: $(".features").offset().top + 1
+                scrollTop: $(".features").offset().top + 1,
             },
             1000 // Timeing Function
         );
@@ -171,11 +167,11 @@ $(function() {
     user(); // Run Function
 
     // Click To Arrow RIght & Left
-    $(".testmonial i").click(function() {
+    $(".testmonial i").click(function () {
         // Click Arrow Right
         $(this).hasClass("right")
             ? // Hide The User And Show Next User
-              $(".usesr.uesr-show").fadeOut(300, function() {
+              $(".usesr.uesr-show").fadeOut(300, function () {
                   $(this)
                       .removeClass("uesr-show")
                       .next(".usesr")
@@ -185,7 +181,7 @@ $(function() {
               })
             : // Click Arrow Left
               // Hide The User And Show Next User
-              $(".testmonial .uesr-show").fadeOut(300, function() {
+              $(".testmonial .uesr-show").fadeOut(300, function () {
                   $(this)
                       .removeClass("uesr-show")
                       .prev(".usesr")
@@ -197,10 +193,10 @@ $(function() {
     // End Function Testmonial  ============================
 
     // Start Function Btn Go To Top Page
-    $(".fa-angle-up").click(function() {
+    $(".fa-angle-up").click(function () {
         $("html, body").animate(
             {
-                scrollTop: 0
+                scrollTop: 0,
             },
             2000
         );

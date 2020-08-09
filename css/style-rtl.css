@@ -48,12 +48,15 @@ body {
 }
 
 @media (max-width: 767px) {
-    .header .nav-bar .list-nav{
+    .header .nav-bar .list-nav {
         top: 50px;
     }
     .header .logo,
     .header .menu {
         font-size: 1.2em;
+    }
+    .header .nav-bar .nav-sochail {
+        padding-bottom: 20px;
     }
 }
 /* ========================================

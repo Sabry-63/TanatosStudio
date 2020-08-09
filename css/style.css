@@ -199,14 +199,13 @@ input {
     border-radius: 5px;
     opacity: 0;
     visibility: hidden;
-    transition: all .4s;
+    transition: all 0.4s;
 }
 
 .header .list-nav .drob-lang:hover .lang {
     opacity: 1;
     visibility: visible;
 }
-
 
 .header .list-nav .lang li.lang-select a {
     color: var(--mainColor);
@@ -914,8 +913,12 @@ input {
     text-align: center;
     font-size: 1.4em;
     margin: 0 10px;
+    cursor: pointer;
+    transition: opacity 0.4s;
 }
-
+.sochial-media i:hover {
+    opacity: 0.7;
+}
 .sochial-media i.fa-facebook {
     background-color: #3b5998;
 }
@@ -962,14 +965,12 @@ input {
     .contact .fa-info,
     .contact .fa-clock-o {
         position: relative;
-        text-align: center;
         display: block;
     }
 
     .contact .contact-info .info,
     .contact .contact-tiems .time {
         padding-left: 0;
-        text-align: center;
     }
 
     .contact .sochial-media {
@@ -982,6 +983,21 @@ input {
         line-height: 30px;
         font-size: 1em;
         margin: 0 10px 20px;
+    }
+}
+@media (max-width: 767px) {
+    .contact .fa-info,
+    .contact .fa-clock-o {
+        text-align: center;
+    }
+
+    .contact .contact-info .info,
+    .contact .contact-tiems .time {
+        text-align: center;
+    }
+
+    .contact .sochial-media {
+        text-align: center;
     }
 }
 /* ========================================

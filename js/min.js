@@ -1,5 +1,5 @@
 window.onload = function () {
-    setInterval(() => {
+    setTimeout(() => {
         document.querySelector(".box-load").remove();
     }, 2000);
 };

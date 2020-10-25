@@ -1,3 +1,9 @@
+window.onload = function () {
+    setInterval(() => {
+        document.querySelector(".box-load").remove();
+    }, 2000);
+};
+
 $(function () {
     "use strict";
 
@@ -156,12 +162,8 @@ $(function () {
 
     // Function Check Arrow Show
     function user() {
-        $(".usesr:first").hasClass("uesr-show")
-            ? leftArrwo.hide()
-            : leftArrwo.fadeIn();
-        $(".usesr:last").hasClass("uesr-show")
-            ? rightArrwo.hide()
-            : rightArrwo.fadeIn();
+        $(".usesr:first").hasClass("uesr-show") ? leftArrwo.hide() : leftArrwo.fadeIn();
+        $(".usesr:last").hasClass("uesr-show") ? rightArrwo.hide() : rightArrwo.fadeIn();
     }
 
     user(); // Run Function
@@ -172,21 +174,13 @@ $(function () {
         $(this).hasClass("right")
             ? // Hide The User And Show Next User
               $(".usesr.uesr-show").fadeOut(300, function () {
-                  $(this)
-                      .removeClass("uesr-show")
-                      .next(".usesr")
-                      .addClass("uesr-show")
-                      .fadeIn(1000);
+                  $(this).removeClass("uesr-show").next(".usesr").addClass("uesr-show").fadeIn(1000);
                   user();
               })
             : // Click Arrow Left
               // Hide The User And Show Next User
               $(".testmonial .uesr-show").fadeOut(300, function () {
-                  $(this)
-                      .removeClass("uesr-show")
-                      .prev(".usesr")
-                      .addClass("uesr-show")
-                      .fadeIn(1000);
+                  $(this).removeClass("uesr-show").prev(".usesr").addClass("uesr-show").fadeIn(1000);
                   user();
               });
     });

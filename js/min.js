@@ -1,7 +1,5 @@
 window.onload = function () {
-    setTimeout(() => {
         document.querySelector(".box-load").remove();
-    }, 2000);
 };
 
 $(function () {
@@ -23,7 +21,7 @@ $(function () {
             $(".header .nav-bar .list-nav").css("background", "transparent");
 
             // Show Btn Top Page
-            $(".fa-angle-up").fadeIn();
+            $(".up-page").fadeIn();
 
             // Check Widow Width & Set Background To Full Screen
             if ($(window).innerWidth() > 992) {
@@ -42,7 +40,7 @@ $(function () {
             // Scroll > window Hieght Remove Padding In Menu Nav
             $(".nav-bar").css("paddingRight", 0);
             // Show Btn Top Page
-            $(".fa-angle-up").fadeOut();
+            $(".up-page").fadeOut();
 
             // Check Window Width & Set Background To Navlist
             if ($(window).innerWidth() > 992) {
@@ -109,7 +107,7 @@ $(function () {
                 );
 
                 // Set Value Right IN Btn Goto Top Pdge
-                $(".fa-angle-up").css("right", widthNavList + 20);
+                $(".up-page").css("right", widthNavList + 20);
 
                 // Set Padding Right To Menu Btn In Nav List
                 $(".fixed-nav").css("paddingRight", widthNavList);
@@ -131,7 +129,7 @@ $(function () {
                 );
 
                 // Remove Value Right IN Btn Goto Top Pdge & Set Right 20 PX
-                $(".fa-angle-up").css("right", 20);
+                $(".up-page").css("right", 20);
 
                 // Remove Padding Right To Menu Btn In Nav List & Set Padiing Right 30 PX
                 $(".fixed-nav").css("paddingRight", 30);
@@ -187,7 +185,7 @@ $(function () {
     // End Function Testmonial  ============================
 
     // Start Function Btn Go To Top Page
-    $(".fa-angle-up").click(function () {
+    $(".up-page").click(function () {
         $("html, body").animate(
             {
                 scrollTop: 0,

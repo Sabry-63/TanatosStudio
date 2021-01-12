@@ -94,7 +94,7 @@ input {
     background-position: center center;
 }
 
-.fa-angle-up {
+.up-page {
     position: fixed;
     right: 20px;
     bottom: 30px;
@@ -106,7 +106,6 @@ input {
     line-height: 50px;
     text-align: center;
     border-radius: 50%;
-    font-size: 1.5em;
     cursor: pointer;
     display: none;
     font-weight: bold;
@@ -120,6 +119,11 @@ input {
     -o-transition: right 0.9s;
     transition: right 0.9s;
 }
+.up-page .fa {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+/* loader */
 .box-load {
     z-index: 20;
     position: fixed;
